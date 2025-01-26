@@ -109,9 +109,7 @@
 
         .personal-info table td.description {
             text-align: justify;
-            /* Justify text */
             vertical-align: top;
-            /* Align text to the top */
         }
 
         .center-text {
@@ -136,14 +134,11 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 1px;
-            /* Adjust the gap between images as needed */
         }
 
         .image-row img {
             flex: 1 1 calc(18% - 1px);
-            /* Adjust the size of the images */
             max-width: calc(18% - 1px);
-            /* Adjust the size of the images */
             height: auto;
         }
 
@@ -232,11 +227,91 @@
             text-align: center;
             cursor: pointer;
             margin: 5px 0;
-            /* Add margin for spacing between buttons */
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            header nav {
+                float: none;
+                margin-top: 0;
+            }
+
+            header ul {
+                text-align: center;
+            }
+
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+
+            .info-container {
+                flex-direction: column;
+            }
+
+            .personal-info,
+            .education-info,
+            .tools-info,
+            .languages-info,
+            .frameworks-info {
+                width: 100%;
+            }
+
+            .image-row img {
+                flex: 1 1 calc(48% - 1px);
+                max-width: calc(48% - 1px);
+            }
+        }
+
+                .languages-info {
+                    margin: 20px 0;
+                }
+                
+                .skill-bar {
+                    margin: 8px 0;
+                    background-color: #f3f3f3;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                
+                .skill-bar p {
+                    margin: 0;
+                    padding: 8px;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+                
+                .skill-percentage {
+                    display: block;
+                    height: 20px;
+                    background-color: #577BC1;
+                    text-align: right;
+                    padding-right: 8px;
+                    line-height: 20px;
+                    color: white;
+                    border-radius: 5px 0 0 5px;
+                    font-size: 12px;
+                }
+
+        @media (max-width: 480px) {
+            .image-row img {
+                flex: 1 1 calc(98% - 1px);
+                max-width: calc(98% - 1px);
+            }
         }
     </style>
 </head>
@@ -304,6 +379,48 @@
                         <p><strong>SMAN 1 Buntok (2019 - 2022)</strong></p>
                         <p>Jurusan MIPA</p>
                     </div>
+                    <div class="training-info">
+                        <h2>Pelatihan</h2>
+                        <p><strong>Web Development & UI/UX Design (2024)</strong></p>
+                        <p>MSIB Batch 7 di Infinite Learning</p>
+                        <p><strong>LKMM-TD IV Fakultas Teknik (2023)</strong></p>
+                        <p>Diselenggarakan oleh BEM FT UPR</p>
+                        <p><strong>Pelatihan Robotik UKM Sakti(2022)</strong></p>
+                        <p>Diselenggarakan oleh UKM Sakti UPR</p>
+                    </div>
+
+                    <div class="skills-info">
+                        <h2>Keterampilan</h2>
+                        <ul>
+                            <li>Kepemimpinan</li>
+                            <li>Manajemen Waktu</li>
+                            <li>Pemrograman</li>
+                            <li>Multimedia</li>
+                            <li>Kerja Sama Tim</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="languages-info">
+                        <h2>Bahasa</h2>
+                        <div class="skill-bar">
+                            <p>Bahasa Indonesia</p>
+                            <div class="skill-percentage" style="width: 80%;">80%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <p>Bahasa Inggris</p>
+                            <div class="skill-percentage" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="organization-experience">
+                        <h2>Pengalaman Organisasi</h2>
+                        <p>Ketua Umum DPM FT UPR Tahun 2024</p>
+                        <p>Sekretaris Komisi B DPM FT UPR Bidang Teknologi dan Informasi Tahun 2023</p>
+                        <p>Anggota Divisi Kominfo HMTI FT UPR Tahun 2023</p>
+                        <p>Anggota Divisi Sekretariat KPUM FT UPR Tahun 2022</p>
+                        <p>Tunas Muda BEM FT UPR Div. MPTI Tahun 2022</p>
+                    </div>
                     <div class="tools-info">
                         <h2>Tools</h2>
                         <div class="image-row">
@@ -339,6 +456,7 @@
                             <img src="assets/images/root/node.png" alt="XAMPP">
                             <img src="assets/images/root/ci.png" alt="XAMPP">
                             <img src="assets/images/root/boostrap.png" alt="Postman">
+                            <img src="assets/images/root/tailwind.svg" alt="Postman">
                         </div>
                     </div>
                 </div>
@@ -458,26 +576,25 @@
         </div>
 
         <div id="contact" class="content">
-            <h1 class="center-text">Kontak</h1>
-            <p>Jangan ragu untuk menghubungi:</p>
+            <h1>Kontak</h1>
+            <p>Jangan ragu untuk menghubungi saya melalui informasi kontak berikut atau dengan mengisi formulir kontak di bawah ini:</p>
             <div class="contact-info">
-                <p><strong>Email:</strong> wahyuniputra@gmail.com</p>
-                <p><strong>Whatsapp:</strong> 0813-4784-4591</p>
+                <p><strong>Email:</strong> wahyuniputra9@gmail.com</p>
+                <p><strong>Telepon:</strong> 0813-4784-4591</p>
             </div>
-            <form action="contact_form_handler.php" method="post" class="contact-form">
+            <div id="contactForm" class="contact-form">
                 <label for="name">Nama:</label>
                 <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
+            
                 <label for="message">Pesan:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Kirim</button>
-            </form>
-        </div>
-    </section>
+            
+                <a id="whatsappLink" href="#" target="_blank">
+                    <button type="button" onclick="sendWhatsAppMessage()">Kirim via WhatsApp</button>
+                </a>
+            </div>
+            <div id="formResponse"></div>
+        </section>
 
     <script>
         function showContent(section) {
@@ -490,7 +607,15 @@
 
         // Show the "About" section by default
         showContent('about');
-    </script>>
+
+    function sendWhatsAppMessage() {
+    var name = document.getElementById('name').value;
+    var message = document.getElementById('message').value;
+    var phoneNumber = '+6281347844591'; // Your WhatsApp number
+    var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent('Nama: ' + name + '\nPesan: ' + message);
+    document.getElementById('whatsappLink').href = whatsappURL;
+}
+    </script>
 
     <footer>
         <p>Wahyuni Putra &copy; 2024</p>
